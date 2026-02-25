@@ -1,0 +1,40 @@
+.App {
+  min-height: 100vh;
+}
+
+.navbar {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+}
+
+.nav-buttons button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  margin-left: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-buttons button:hover,
+.nav-buttons button.active {
+  background: white;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
