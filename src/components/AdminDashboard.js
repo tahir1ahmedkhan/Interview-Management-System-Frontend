@@ -4,7 +4,7 @@ import './AdminDashboard.css';
 
 const API_URL = 'http://localhost:5000/api/candidates';
 
-function AdminDashboard() {
+function AdminDashboard({ adminData }) {
   const [candidates, setCandidates] = useState([]);
   const [filter, setFilter] = useState('all');
   const [stats, setStats] = useState({ pending: 0, taken: 0, rejected: 0 });
@@ -58,7 +58,10 @@ function AdminDashboard() {
 
   return (
     <div className="dashboard">
-      <h2>Admin Dashboard</h2>
+      <div className="dashboard-header">
+        <h2>Admin Dashboard</h2>
+        {adminData && <p className="welcome-text">Welcome, {adminData.username}!</p>}
+      </div>
       
       <div className="stats-container">
         <div className="stat-card pending">

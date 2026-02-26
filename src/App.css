@@ -1,36 +1,75 @@
 .App {
   min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .navbar {
-  background: #2c3e50;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.navbar h1 {
-  font-size: 1.5rem;
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #fff, #a8d8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: 0.2rem;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
 }
 
 .nav-buttons button {
-  background: transparent;
-  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   color: white;
-  padding: 0.5rem 1.5rem;
-  margin-left: 1rem;
-  border-radius: 4px;
+  padding: 0.6rem 1.8rem;
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
 }
 
-.nav-buttons button:hover,
+.nav-buttons button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
 .nav-buttons button.active {
   background: white;
-  color: #2c3e50;
+  color: #1e3c72;
+  border-color: white;
+}
+
+.logout-btn {
+  background: rgba(231, 76, 60, 0.8) !important;
+  border-color: rgba(231, 76, 60, 0.8) !important;
+}
+
+.logout-btn:hover {
+  background: rgba(192, 57, 43, 0.9) !important;
 }
 
 .container {

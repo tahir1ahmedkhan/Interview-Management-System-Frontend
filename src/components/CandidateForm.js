@@ -33,6 +33,7 @@ function CandidateForm() {
   return (
     <div className="form-container">
       <h2>Apply for Interview</h2>
+      <p className="form-subtitle">Join DAFINITIQ AI Team</p>
       {message && <div className={`message ${message.includes('Error') ? 'error' : 'success'}`}>{message}</div>}
       
       <form onSubmit={handleSubmit}>
