@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './AdminLogin.css';
 
 const API_URL = 'http://localhost:5001/api/auth';
 
 function AdminLogin({ onLogin }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     password: ''
@@ -25,6 +27,7 @@ function AdminLogin({ onLogin }) {
     try {
       const response = await axios.post(`${API_URL}/login`, formData);
       onLogin(response.data.admin);
+      navigate('/admin/dashboard');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed. Please try again.');
     } finally {
